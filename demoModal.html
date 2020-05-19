@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+		<title>通用弹窗</title>
+		<script src="js/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/eyijao_modal.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body style="height: 100%;">
+		<div class="tc">
+			<a href="javascript:;" class="open-popup">弹窗</a>
+			<!--<a href="javascript:;" class="open-popup" data-target="#eyijiao_modal">弹窗</a>-->
+		</div>
+		<!--<div class="eyijiao_modal" id="eyijiao_modal">
+			<div class="eyijiao_modal_mack"></div>
+			<div class="eyijiao_modal_con">
+				<div class="eyijiao_modal_title">
+					<label class="eyijiao_modal_title_label">标题</label>
+					<a href="javascript:;" class="eyijiao_modal_icon_btn eyijiao_modal_close"></a>
+				</div>
+				<div class="eyijiao_modal_con_bd">
+					<p>爱上岗的爱上岗的桑</p>
+					<p>爱上岗的爱上岗的桑</p>
+					<p>爱上岗的爱上岗的桑</p>
+				</div>
+				<div class="eyijiao_modal_con_bot eyiijao_between">
+					<a href="javascript:;" class="eyijiao_modal_btn eyijiao_modal_close">取消</a>
+					<a href="javascript:;" class="eyijiao_modal_btn">确定</a>
+				</div>
+			</div>
+		</div>-->
+	</body>
+</html>
+<script type="text/javascript">
+	$(function(){
+		var inhtml = '<p>爱上岗的爱上岗的桑</p><p>爱上岗的爱上岗的桑</p><p>爱上岗的爱上岗的桑</p>'
+		$(".open-popup").click(function(){
+			//$("#eyijiao_modal").show()
+			e.HalfDialog({
+				title:'dialog提示文案',
+	    		content:inhtml,
+	    		confirm:function(){
+	     			console.log('确定')
+	     		},
+	    		cancelText:'',
+	    		cancel:function(){
+	    			console.log('取消')
+	    		},
+			})
+		})
+		/*
+		 * 复制 eyijao_modal.js和 eyijiaoModal.css 到项目文件里面
+		 * 在页面引用 eyijao_modal.js即可，
+		 * 调用方法
+		 * Eyijiao.HalfDialog({
+		 *		title:'dialog提示文案',
+	     *		content:inhtml,
+	     *		confirmText:'提交',
+	     *		confirm:function(){
+	     *			console.log('确定')
+	     *		},
+	     *		cancelText:'',
+	     *		cancel:function(){
+	     *			console.log('取消')
+	     *		},
+		 *	})
+		 * 
+		 * title => 标题栏（12个字为最佳） 
+		 * content => 内容栏 （可以为纯文字，也可以为元素
+		 * confirmText =>  按钮名称 (默认为确定，可自定义)
+		 * cancelText => 按钮名称 (默认为取消，可自定义)
+		 * confirm =>  按钮回调函数 
+		 * cancel => 按钮回调函数
+		 * 
+		 * cancelHide => 按钮是否显示 （默认为false即显示， true为隐藏）
+		 * confirmHide =>  按钮是否显示 （默认为false即显示， true为隐藏）
+		 * 按钮可以都不显示，即为没有按钮
+		 * 
+		 * time => 动画时间   （默认为200,）
+		 * */
+	})
+</script>
